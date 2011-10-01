@@ -1,0 +1,48 @@
+doctype html
+html
+
+  head
+    title Pork Adventure
+    link(href="style.css", media="all", rel="stylesheet", type="text/css")
+    script(src="lib/jquery.js")
+    script(src="lib/underscore.js")
+    script(src="lib/backbone.js")
+    script(src="script.js")
+
+  body
+    #login
+      input(type="text", placeholder="Who are you?", spellcheck="false")
+
+    #main
+      table#islands
+      #character
+        h1.name
+        .money
+        .cargo
+        .location
+      #chats
+        ul
+          li.more more
+        input(type="text")
+
+    // Templates
+
+    script#chat-template(type="text/template")
+      .chat
+        .timestamp <%= timestamp %>
+        .message
+          span.name
+          | :
+          span.content
+
+    script#island-template(type="text/template")
+      td.img
+        img
+
+      td
+        h2.name <%= name %>
+        .price
+          | Stuff costs
+          span
+          |  clams
+        button

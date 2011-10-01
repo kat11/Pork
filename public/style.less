@@ -1,0 +1,163 @@
+@light_pink: #f9c;
+@dark_pink:  #f7c;
+
+.shadow {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 5px;
+}
+
+html {
+  margin: 0;
+  font-family: 'Comic Sans MS';
+  background-color: @light_pink;
+  background-attachment: fixed;
+  font-family: 'Comic Sans MS';
+
+  &.flying {
+    background-image: url('img/fly.gif');
+  }
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+#login {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  display: none;
+  height: 100%;
+  width: 100%;
+  background-image: url('img/hi.jpg');
+  background-color: white;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  input {
+    font-family: 'Comic Sans MS';
+    margin: 4em 0 0 0;
+    text-align: center;
+    font-size: 2.5em;
+    background: @light_pink;
+  }
+}
+
+@chat_width: 25em;
+@gap: 1em;
+
+#main {
+  display: none;
+  margin: 0 auto 0 auto;
+  padding: 2em 0 0 0;
+  width: 48em;
+}
+
+#character {
+  background: @dark_pink;
+  width: @chat_width;
+  padding: @gap;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  line-height: 1.5;
+  .shadow;
+
+  h1 {
+    font-size: 1.75em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 0 0.5em 0;
+    line-height: 1;
+  }
+}
+
+#islands {
+  border-collapse: collapse;
+  float: right;
+  background: @dark_pink;
+  .shadow;
+
+  td {
+    border: 3px solid black;
+    padding: 0.5em;
+
+    h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 1.25em;
+      font-weight: bold;
+    }
+  }
+
+  td.img {
+    padding: 0;
+    background: white;
+
+    img {
+      height: 80px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+#chats {
+  background: black;
+  color: @dark_pink;
+  width: @chat_width;
+  padding: @gap;
+  margin: @gap 0 0 0;
+  border-style: solid;
+  border-width: 0 3px;
+  border-color: black;
+  .shadow;
+
+  input {
+    width: 100%;
+    margin: @gap 0 0 0;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 14em;
+    overflow-y: auto;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .timestamp {
+    line-height: 1.95;
+    font-size: 0.625em;
+    float: left;
+  }
+
+  .timestamp, .more {
+    color: #999;
+  }
+
+  .message {
+    margin: 0 0 0 7.5em;
+  }
+
+  .message, .more {
+    line-height: 1.5;
+    font-size: 0.8125em;
+  }
+
+  .more {
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+}
